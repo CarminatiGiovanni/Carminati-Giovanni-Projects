@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MEMORY</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+		<style>
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../../index.html" class="logo"><strong>MEMORY</strong> 26-11-2020</a>
+									<!--
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+									-->
+
+								</header>
+							
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Introduction</h1>
+									</header>
+
+									<span class="image main">
+										<div>
+											<img src="./IMG/goals17.jpg" onclick="location.href = './memory_game.html';" alt="game" title="CLICK HERE FOR THE GAME"/>
+										</div>
+										
+									</span>
+									
+									<p>This memory was designed between 12 and 26 November of 2020. <strong>Click the image to start game.</strong></p>
+									<p>The focus is on the <a href="https://unric.org/">17 goals of AGENDA 2020</a>. Every card is a point of Agenda, match it with the same card in the less attempts</p>
+									<p>The game on start ask you the difficulty, select the quantity of cards you want between 2 and 17. Then you have to click on two cards, they will be showned andm if they are the same they will disappear; if not they will turn closed again. The game ends when all the cards are desappeared.</p>
+
+									<hr class="major" />
+
+									<h2>WHAT IS AGENDA 2030</h2>
+									<p>This Agenda is a plan of action for people, planet and prosperity signed in 2015 by 193 nations members of ONU</p>
+									<p>The plan provides for helping nation above the 17 points to improve the human prosperity on earth, take care of planet, stop pollution, stop wars and help poor peolple in all the world.</p>
+									
+									
+									<hr class="major" />
+
+									<h2>THE CODE</h2>
+									<p>the code was developed using <a href="https://code.visualstudio.com/">visual studio code</a>, the programlenguages is Javascript</p>
+
+									<hr class="major" />
+
+									<h2>Project's files and directories</h2>
+									<p>
+										<table>
+											<tr>
+												<th>FILE NAME</th>
+												<th>EXTENTION</th>
+												<th>CONTENT</th>
+											</tr>
+											<tr>
+												<td>memory_game</td>
+												<td>.html</td>
+												<td>it's the HTML5 page that call <strong>onload</strong> the javascript code</td>
+											</tr>
+											<tr>
+												<td>memory</td>
+												<td>.js</td>
+												<td>it contains the <strong>js code</strong></td>
+											</tr>
+											<tr>
+												<td>IMG</td>
+												<td>folder</td>
+												<td>contains all the images of the project</td>
+											</tr>
+										</table>
+									</p>
+
+									<hr class="major" />
+
+									<h2>javascript's functions and parameters</h2>
+									<p><code>function carica()</code> //it is called in <strong>onload</strong> in the body, with the use of <code>document.write()</code> it builds the HTML page.</p>
+									<p><code>function confronta()</code> //when two cards are opened, it checks if they are the same</p>
+									<p><code>function scopri(obj)</code> //show the selected card passed as parameter using <emphasized>this</emphasized> keyword</p>
+									<p><code>function copri()</code> //hide all the opened cards card</p>
+									<p><code>function vittoria()</code> //routine called at the end of the game</p>
+									<p><code>function mescola(array)</code> //function coming from the internet to mix an array passed as parameter and returned after have been melted</p>
+
+									<hr class="major" />
+
+									<h2>Globals and Objects</h2>
+									<p>
+										<div>
+											<pre>
+												<code>
+let indirizzi_immagini = [];
+for(let i=1;i &lt =17;i++) indirizzi_immagini.push("./IMG/" + i +".png"); //carica le immagini
+let GLOBALS_LET = {
+	a : null,
+	b : null,
+	coppie_trovate : 0,
+	N_TESSERE : NaN,
+};
+											</code>
+											</pre>
+										</div>
+									</p>
+									<p><code>indirizzi_immagini</code> it's a list where i put all my images addres (using the follow for-cicle)</p>
+									<p>
+										<code>GLOBALS_LET</code> contains all the global variable, <strong>a</strong> and <strong>b</strong> are used to remember the images's objects of the cards selected, <strong>coppie_trovate</strong> is the count of tuple found from the user, <strong>N_TESSERE</strong> it is set in the <italic>carica()</italic> function and is the number of tuple of cards in the game
+									</p>
+								</section>
+
+						</div>
+					</div>
+				<!----
+				Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+							<section id="search" class="alt">
+								<form method="post" action="#">
+									<input type="text" name="query" id="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="../../../index.html">Homepage</a></li>
+									<li><a href="../../../about_me.html">About me</a></li>
+									<li>
+										<span class="opener">C++</span>
+										<ul>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project3 </a></li>
+											<li><a href="#">Project4</a></li>
+										</ul>
+									<li>
+										<span class="opener">Python3</span>
+										<ul>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project3 </a></li>
+											<li><a href="#">Project4</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">HTML, CSS, Javascript</span>
+										<ul>
+											<li><a href="memory.html">MEMORY</a></li>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project3 </a></li>
+											<li><a href="#">Project4</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">ARDUINO</span>
+										<ul>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project3 </a></li>
+											<li><a href="#">Project4</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Cisco Packet Tracert</span>
+										<ul>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project3 </a></li>
+											<li><a href="#">Project4</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Telegram BOT</span>
+										<ul>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project1</a></li>
+											<li><a href="#">Project3 </a></li>
+											<li><a href="#">Project4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>For any question ask me on my E-mail</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#" style="position: relative;">carminati.giovanni.studente<br>@itispaleocapa.it</a></li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
